@@ -57,8 +57,10 @@ class DigitalTimer extends Component {
 
     if (isTimerRunning) {
       this.clearTimerInterval()
+      console.log('......paused.....')
       // this.setState({isTimerRunning: false}) // Set isTimerRunning to false explicitly when pausing.
     } else {
+       console.log('.....running now.....')
       this.intervalId = setInterval(this.incrementTimeElapsedInSeconds, 1000)
       // console.log(`${isTimerRunning} after else`)
       // this.setState(prevState => ({isTimerRunning: !prevState.isTimerRunning})) // Set isTimerRunning to true explicitly when starting.
